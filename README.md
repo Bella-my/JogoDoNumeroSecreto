@@ -1,70 +1,114 @@
-🎲 Jogo do Número Secreto
+# 🎲 Jogo do Número Secreto
 
-📝 Descrição
+Um jogo interativo desenvolvido em JavaScript onde o jogador precisa adivinhar um número secreto gerado aleatoriamente pelo sistema.
 
-O Jogo do Número Secreto é uma aplicação simples e divertida em JavaScript, onde o jogador tenta adivinhar um número aleatório gerado pelo sistema dentro de um intervalo definido. O jogo fornece dicas para ajudar o jogador, indicando se o número secreto é maior ou menor que o chute fornecido.
+## 🚀 Demo
 
-🚀 Funcionalidades
+**[Jogar Agora](https://one-alura-cksx-git-main-ana-vitorias-projects-ec65fd0c.vercel.app/)**
 
-🔢 Gera um número aleatório entre 1 e 10 sem repetições consecutivas.
+## 📝 Sobre o Projeto
 
-💬 Exibe mensagens dinâmicas para orientar o jogador durante o jogo.
+O Jogo do Número Secreto é uma aplicação interativa onde o jogador tenta adivinhar um número aleatório entre 1 e 10. Este projeto foca no desenvolvimento da **lógica JavaScript**, implementando funcionalidades como geração de números aleatórios, validação de chutes, feedback dinâmico e integração com síntese de voz.
 
-📊 Conta o número de tentativas feitas pelo jogador para adivinhar o número secreto.
+> **Nota**: A interface visual (HTML/CSS) foi fornecida como base, e o desenvolvimento se concentrou na implementação completa da lógica do jogo em JavaScript.
 
-🔄 Permite reiniciar o jogo após o jogador acertar o número.
+## ✨ Funcionalidades
 
-🎙️ Integração com o recurso de leitura de texto em voz para melhorar a experiência do usuário.
+- 🔢 **Geração inteligente**: Números aleatórios entre 1 e 10 sem repetições consecutivas
+- 💬 **Feedback dinâmico**: Mensagens que orientam o jogador durante toda a partida
+- 📊 **Contador de tentativas**: Acompanhe quantas tentativas foram necessárias
+- 🔄 **Reinício rápido**: Comece uma nova partida a qualquer momento
+- 🎙️ **Narração por voz**: Experiência mais imersiva com leitura das mensagens
+- 🎯 **Interface intuitiva**: Design simples e fácil de usar
 
-🎮 Como Jogar
+## 🎮 Como Jogar
 
-O jogo inicia com uma mensagem informando o intervalo do número secreto (de 1 a 10).
+1. **Início**: O jogo apresenta o intervalo do número secreto (1 a 10)
+2. **Chute**: Digite um número no campo e clique em "Verificar"
+3. **Feedback**: O sistema informa se você:
+   - ✅ **Acertou**: Mostra o número de tentativas e habilita o botão de reinício
+   - ❌ **Errou**: Indica se o número é maior ou menor que seu chute
+4. **Reiniciar**: Clique no botão de reinício para uma nova partida
 
-O jogador digita um número no campo de entrada e clica no botão para verificar o chute.
+## 💻 Tecnologias Utilizadas
 
-O sistema informa se o jogador:
+| Tecnologia | Finalidade | Desenvolvimento |
+|-----------|------------|----------------|
+| ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) | Lógica do jogo e interatividade | ✅ **Desenvolvido** |
+| ![ResponsiveVoice](https://img.shields.io/badge/ResponsiveVoice-4285F4?style=flat&logo=google&logoColor=white) | Síntese de voz para narração | ✅ **Integrado** |
+| ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) | Estrutura da interface | 📋 Base fornecida |
+| ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) | Estilização visual | 📋 Base fornecida |
 
-Acertou: Exibe o número de tentativas feitas e habilita o botão de reinício.
+## 🛠️ Desenvolvimento JavaScript
 
-Errou: Indica se o número secreto é maior ou menor que o chute fornecido.
+### Funcionalidades Implementadas
+- **Sistema de geração de números**: Algoritmo que evita repetições consecutivas
+- **Validação de entrada**: Processamento e validação dos chutes do usuário
+- **Lógica de feedback**: Comparação e retorno de dicas (maior/menor)
+- **Contador de tentativas**: Controle do número de jogadas
+- **Integração com API de voz**: Implementação do ResponsiveVoice para narração
+- **Gerenciamento de estado**: Controle completo do fluxo do jogo
 
-O jogador pode reiniciar o jogo clicando no botão de reinício.
+### Arquitetura do Código
 
-💻 Tecnologias Utilizadas
+```javascript
+// Principais funções desenvolvidas
+gerarNumeroAleatorio()     // Gera número secreto sem repetições
+exibirTextoNaTela()        // Atualiza interface e reproduz áudio
+verificarChute()           // Processa tentativa do jogador
+reiniciarJogo()           // Reset completo do estado
+```
 
-HTML: Estrutura básica da interface.
+### Variáveis de Estado
+- `numeroSecreto`: Armazena o número atual da partida
+- `listaDeNumerosSorteados`: Controla números já utilizados
+- `tentativas`: Contador de jogadas do usuário
 
-CSS: Estilização visual (caso aplique no futuro).
+## 🚀 Como Executar Localmente
 
-JavaScript: Lógica do jogo e interação com o usuário.
+### Pré-requisitos
+- Navegador web moderno
+- Conexão com internet (para ResponsiveVoice API)
 
-ResponsiveVoice API: Leitura de texto em voz para mensagens exibidas no jogo.
+### Instalação
+```bash
+# Clone o repositório
+git clone [git@github.com:Bella-my/JogoDoNumeroSecreto.git]
 
-🛠️ Estrutura do Código
+# Navegue até o diretório
+cd jogo-numero-secreto
 
-Variáveis Globais: Gerenciam o estado do jogo, incluindo o número secreto, lista de números já sorteados e número de tentativas.
+# Abra o index.html no seu navegador
+# ou use um servidor local como Live Server (VS Code)
+```
 
-Funções Principais:
+## 🌐 Deploy
 
-gerarNumeroAleatorio(): Gera o número secreto, garantindo que ele não seja repetido até que todos os números do intervalo sejam usados.
+Este projeto está hospedado na Vercel e pode ser acessado através do link:
+**https://one-alura-cksx-git-main-ana-vitorias-projects-ec65fd0c.vercel.app/**
 
-exibirTextoNaTela(tag, texto): Atualiza o conteúdo na interface e reproduz o texto em voz.
+## 💡 Possíveis Expansões (JavaScript)
 
-verificarChute(): Valida o chute do jogador e fornece feedback.
+- [ ] Níveis de dificuldade com diferentes intervalos
+- [ ] Sistema de pontuação baseado em tentativas
+- [ ] Histórico de partidas com localStorage
+- [ ] Timer para adicionar pressão temporal
+- [ ] Modo desafio com múltiplas rodadas
 
-reiniciarJogo(): Reinicia o estado do jogo.
+## 🤝 Contribuições
 
-Interação com a Interface: Utiliza seletores do DOM para capturar entradas e atualizar elementos da interface.
+Contribuições focadas na lógica JavaScript são bem-vindas! Para contribuir:
 
-▶️ Como Executar
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/LogicaAmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some JavaScript logic'`)
+4. Push para a branch (`git push origin feature/LogicaAmazingFeature`)
+5. Abra um Pull Request
 
-Clone o repositório ou copie o código para um arquivo local.
+## 👤 Autor
 
-Certifique-se de que possui uma conexão com a internet para acessar a API ResponsiveVoice.
+**Ana Vitória**
+- GitHub: [@Bella_my](https://github.com/Bella-my)
+- LinkedIn: [Ana Silva](https://www.linkedin.com/in/ana-silva-880931178/)
 
-Abra o arquivo HTML correspondente em um navegador.
-
-📜 Licença
-
-Este projeto é de uso livre e aberto para aprendizado e modificações. Utilize e adapte como preferir! 🌟
-
+---
